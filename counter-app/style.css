@@ -1,0 +1,13 @@
+.h-screen{
+    height: 100vh;
+}
+body{
+    background: url('image.jpg') no-repeat;
+    background-size: cover;
+
+}
+
+.bg-lightdark{
+    background-color: #00000065;
+
+}
