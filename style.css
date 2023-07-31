@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap');
+:root{
+    --main-color:#fe0000;
+    --secondary-color:#f2f2f2;
+    --color-purple:#4362ffc4;
+}
+body{
+    background-color: var(--secondary-color);
+    font-family: 'Jost', sans-serif;
+}
+.top-pattern {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+    opacity: 0.8;
+  }
+  .text-purple{
+    color: var(--color-purple) !important;
+  }
+  .border-purple{
+    border-color: var(--color-purple) !important;
+  }
+  @media screen and (max-width:767px) {
+    .main-heading{
+        font-size: 22px;
+        font-weight: 600;
+    }
+    .sub-heading{
+        font-size: 18px;
+
+    }
+  }
