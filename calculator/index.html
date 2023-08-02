@@ -17,20 +17,26 @@
         </div>
         <div class="row justify-content-center mt-5 ">
             <div class="col-3 col-md-2 col-lg-1">
-                <input type="text" name="input1" id="" class="form-control border-dash border-dark border-2 text-center fw-bold fs-5" placeholder="1">
+                <input type="text" name="input1" id="input1" class="form-control border-dash border-dark border-2 text-center fw-bold fs-5" placeholder="0">
             </div>
             <div class="col-3 col-md-2 col-lg-1">
-                <input type="text" name="input2" id="" class="form-control border-dash border-dark border-2 text-center fw-bold fs-5" placeholder="2">
+                <input type="text" name="input2" id="input2" class="form-control border-dash border-dark border-2 text-center fw-bold fs-5" placeholder="0">
             </div>
         </div>
         <div class="row">
             <div class="col-sm-12 text-center mt-5">
-                <button class="btn btn-outline-dark fw-bold">Add</button>
-                <button class="btn btn-outline-dark fw-bold">Subtract</button>
-                <button class="btn btn-outline-dark fw-bold">Divide</button>
-                <button class="btn btn-outline-dark fw-bold">Multiply</button>
+                <button class="btn btn-outline-dark fw-bold" onclick="addAction()" >Add</button>
+                <button class="btn btn-outline-dark fw-bold" onclick="subAction()">Subtract</button>
+                <button class="btn btn-outline-dark fw-bold" onclick="divAction()"> Divide</button>
+                <button class="btn btn-outline-dark fw-bold" onclick="multAction()">Multiply</button>
             </div>
         </div>
+        <div class="row">
+           <div class="col-12 text-center">
+            <h4 class="sumHeading mt-5">Result = <span id="sumEl"></span></h4>
+           </div>
+        </div>
     </div>
+    <script  src="script.js"></script>
 </body>
 </html>
