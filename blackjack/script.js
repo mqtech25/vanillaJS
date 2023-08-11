@@ -3,15 +3,26 @@ let cardArray=[]
 let hasBlackjack = false;
 let isAlive=false;
 let message="";
-
 let sum = 0; 
+let userName= ''
 
+
+while(!userName ){
+    userName=prompt("Enter Name")
+};
+
+let playerObj={
+    name:userName,
+    cash:25,
+}
 let messageEl= document.getElementById('message-el')
 let sumEl= document.getElementById('sum-el')
 let cardEl = document.getElementById('card-el');
-
+let playerEL = document.getElementById('player-el')
+let gameStartEl = document.getElementById('gameStart-el')
 
 let startGame =()=>{
+    gameStartEl.style.display = "none"
     isAlive= true
     let firstCardNumber= randomNumberFunc()
     let secondCardNumber= randomNumberFunc()
@@ -32,16 +43,17 @@ let renderGame = ()=>{
 
     sumEl.textContent = "Sum = "+ sum;
     checkFunc(sum)
-
     
 }
 
 let newCard = ()=>{
     
-    let card= randomNumberFunc();
-    cardArray.push(card)
-    sum += card;
-    renderGame()
+    if(isAlive === true && hasBlackjack === false){
+        let card= randomNumberFunc();
+        cardArray.push(card)
+        sum += card;
+        renderGame()
+    }
 }
 
 let checkFunc =(sum)=>{
@@ -50,9 +62,13 @@ let checkFunc =(sum)=>{
     }else if(sum===21){
         message=`Wohoo! You've got Blackjack! 🥳`;
         hasBlackjack= true;
+        playerEL.textContent= playerObj.name +": $" + playerObj.cash ;
+        restGame()
+
     }else{
         message=`You're out of the game! 😥`;
         isAlive=false;
+        restGame()
     }
     messageEl.textContent = message;
 }
@@ -68,3 +84,9 @@ function randomNumberFunc  (){
         return rendomValue;
     }
 } 
+
+function restGame() {
+    gameStartEl.textContent = " RESTART GAME "
+    gameStartEl.style.display = "block"
+
+}
