@@ -23,7 +23,8 @@ let gameStartEl = document.getElementById('gameStart-el')
 
 let startGame =()=>{
     gameStartEl.style.display = "none"
-    isAlive= true
+    isAlive= true;
+    hasBlackjack = false;
     let firstCardNumber= randomNumberFunc()
     let secondCardNumber= randomNumberFunc()
     sum=firstCardNumber + secondCardNumber;
