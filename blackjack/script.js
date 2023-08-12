@@ -25,6 +25,7 @@ let startGame =()=>{
     gameStartEl.style.display = "none"
     isAlive= true;
     hasBlackjack = false;
+    playerEL.textContent=""
     let firstCardNumber= randomNumberFunc()
     let secondCardNumber= randomNumberFunc()
     sum=firstCardNumber + secondCardNumber;
