@@ -8,15 +8,18 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
+    <div class="wrapper">
         <div class="row">
             <div class="col-sm-12">
                 <!-- Search form -->
-             <div class="input-group my-4">
-                <input type="text" name="" id="input-el" class="form-control" placeholder="Enter Bookmark Url">
-                <button class="btn btn-primary" id="input-btn">SAVE</button>
+             <div class="input-group mt-4 mb-2">
+                <input type="text" name="" id="input-el" class="form-control" placeholder="Enter Bookmark Url" required> 
+                <button class="btn btn-success" id="input-btn">SAVE</button>
              </div>
-             <ul id="inputList"></ul>
+             <button class="btn btn-outline-success btn-sm my-2" id="input-SaveBtn">SAVE TAB</button>
+             <button class="btn btn-outline-danger btn-sm my-2" id="input-DelBtn">DELETE ALL</button>
+             <ul id="inputList" class="nav flex-column"></ul>
+
             </div>
         </div>
     </div>
